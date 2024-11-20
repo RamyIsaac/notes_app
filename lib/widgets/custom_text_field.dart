@@ -15,10 +15,10 @@ class CustomTextField extends StatelessWidget {
         decoration: InputDecoration(
           focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),
-              borderSide: BorderSide(color: Colors.white)),
+              borderSide: const BorderSide(color: Colors.white)),
           enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),
-              borderSide: BorderSide(color: Colors.white)),
+              borderSide: const BorderSide(color: Colors.white)),
           label: Text(
             label,
             style: TextStyle(color: kPrimaryColor),

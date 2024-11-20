@@ -14,7 +14,7 @@ class CustomButton extends StatelessWidget {
           color: kPrimaryColor,
         ),
         height: 60,
-        width: double.infinity,
+        width: MediaQuery.of(context).size.width,
         child: const Center(
           child: Text(
             'Add',
