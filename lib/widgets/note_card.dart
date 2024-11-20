@@ -31,7 +31,7 @@ class NoteCard extends StatelessWidget {
             ),
             trailing: IconButton(
               onPressed: () {},
-              icon: Icon(
+              icon: const Icon(
                 Icons.delete,
                 size: 32,
                 color: Colors.black,
