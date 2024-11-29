@@ -31,13 +31,13 @@ class _AddNoteFormState extends State<AddNoteForm> {
             onSaved: (value) {
               title = value;
             },
-            label: 'Title',
+            hint: 'Title',
           ),
           CustomTextField(
             onSaved: (value) {
               content = value;
             },
-            label: 'Content',
+            hint: 'Content',
             maxLines: 5,
           ),
           const SizedBox(
@@ -54,7 +54,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
                       formKey.currentState!.save();
                       var currentDate = DateTime.now();
                       var formattedCurrentDate =
-                          DateFormat('dd-mm-yyyy').format(currentDate);
+                          DateFormat('dd-MM-yyyy at HH:mm').format(currentDate);
                       var noteModel = NoteModel(
                           title: title!,
                           content: content!,

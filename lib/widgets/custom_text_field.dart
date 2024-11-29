@@ -3,16 +3,22 @@ import 'package:notes_app/constants.dart';
 
 class CustomTextField extends StatelessWidget {
   CustomTextField(
-      {super.key, this.maxLines = 1, required this.label, this.onSaved});
+      {super.key,
+      this.maxLines = 1,
+      required this.hint,
+      this.onSaved,
+      this.onChanged});
   final int maxLines;
-  final String label;
+  final String hint;
   final void Function(String?)? onSaved;
+  final Function(String)? onChanged;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: TextFormField(
+        onChanged: onChanged,
         onSaved: onSaved,
         validator: (value) {
           if (value?.isEmpty ?? true) {
@@ -34,7 +40,7 @@ class CustomTextField extends StatelessWidget {
               borderRadius: BorderRadius.circular(8),
               borderSide: const BorderSide(color: Colors.white)),
           label: Text(
-            label,
+            hint,
             style: TextStyle(color: kPrimaryColor),
           ),
         ),

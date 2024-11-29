@@ -21,12 +21,12 @@ class EditNoteViewBody extends StatelessWidget {
           const SizedBox(
             height: 50,
           ),
-          CustomTextField(label: 'Title'),
+          CustomTextField(hint: 'Title'),
           const SizedBox(
             height: 16,
           ),
           CustomTextField(
-            label: 'Content',
+            hint: 'Content',
             maxLines: 5,
           )
         ],
