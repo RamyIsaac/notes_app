@@ -20,19 +20,19 @@ class _ColorsListViewState extends State<ColorsListView> {
       height: 38 * 2,
       child: ListView.builder(
           scrollDirection: Axis.horizontal,
-          itemCount: Kcolors.length,
+          itemCount: kColors.length,
           itemBuilder: (context, index) {
             return Padding(
               padding: const EdgeInsets.symmetric(horizontal: 6.0),
               child: GestureDetector(
                 onTap: () {
                   selectedIndex = index;
-                  BlocProvider.of<AddNoteCubit>(context).color = Kcolors[index];
+                  BlocProvider.of<AddNoteCubit>(context).color = kColors[index];
 
                   setState(() {});
                 },
                 child: ColorItem(
-                  color: Kcolors[index],
+                  color: kColors[index],
                   isSelected: selectedIndex == index,
                 ),
               ),

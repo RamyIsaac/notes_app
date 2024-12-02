@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:notes_app/constants.dart';
-import 'package:notes_app/cubits/add_note_cubit/add_note_cubit.dart';
 import 'package:notes_app/models/note_model.dart';
 import 'package:notes_app/widgets/add_note_form.dart';
 
@@ -17,7 +15,7 @@ late int selectedIndex;
 class _EditNoteColorState extends State<EditNoteColor> {
   @override
   void initState() {
-    selectedIndex = Kcolors.indexOf(Color(widget.note.color));
+    selectedIndex = kColors.indexOf(Color(widget.note.color));
     super.initState();
   }
 
@@ -27,7 +25,7 @@ class _EditNoteColorState extends State<EditNoteColor> {
       height: 38 * 2,
       child: ListView.builder(
           scrollDirection: Axis.horizontal,
-          itemCount: Kcolors.length,
+          itemCount: kColors.length,
           itemBuilder: (context, index) {
             return Padding(
               padding: const EdgeInsets.symmetric(horizontal: 6.0),
@@ -35,12 +33,12 @@ class _EditNoteColorState extends State<EditNoteColor> {
                 onTap: () {
                   selectedIndex = index;
 
-                  widget.note.color = Kcolors[index].value;
+                  widget.note.color = kColors[index].value;
 
                   setState(() {});
                 },
                 child: ColorItem(
-                  color: Kcolors[index],
+                  color: kColors[index],
                   isSelected: selectedIndex == index,
                 ),
               ),
