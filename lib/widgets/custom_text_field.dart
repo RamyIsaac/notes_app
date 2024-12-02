@@ -5,11 +5,11 @@ class CustomTextField extends StatelessWidget {
   CustomTextField(
       {super.key,
       this.maxLines = 1,
-      required this.hint,
+      required this.label,
       this.onSaved,
       this.onChanged});
   final int maxLines;
-  final String hint;
+  final String label;
   final void Function(String?)? onSaved;
   final Function(String)? onChanged;
 
@@ -40,7 +40,7 @@ class CustomTextField extends StatelessWidget {
               borderRadius: BorderRadius.circular(8),
               borderSide: const BorderSide(color: Colors.white)),
           label: Text(
-            hint,
+            label,
             style: TextStyle(color: kPrimaryColor),
           ),
         ),

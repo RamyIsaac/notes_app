@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/widgets/colors_list_view.dart';
 import 'package:notes_app/widgets/custom_app_bar.dart';
 import 'package:notes_app/widgets/custom_text_field.dart';
+import 'package:notes_app/widgets/edit_note_color.dart';
 
 class EditNoteViewBody extends StatelessWidget {
   const EditNoteViewBody({super.key});
@@ -21,14 +23,14 @@ class EditNoteViewBody extends StatelessWidget {
           const SizedBox(
             height: 50,
           ),
-          CustomTextField(hint: 'Title'),
+          CustomTextField(label: 'Title'),
           const SizedBox(
             height: 16,
           ),
           CustomTextField(
-            hint: 'Content',
+            label: 'Content',
             maxLines: 5,
-          )
+          ),
         ],
       ),
     );
